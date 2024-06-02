@@ -1,0 +1,6 @@
+{
+	"baseURL": "https://www.zillow.com/mortgage-calculator/?_d=true",
+	"viewportHeight": 800,
+	"viewportWidth": 1200,
+	"experimentalSourceRewriting": true
+}
