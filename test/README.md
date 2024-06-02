@@ -19,7 +19,11 @@ These tests are being run using the automation tool, Cypress. (https://www.cypre
 -   Choose a browser and click 'Start E2E Testing in ' + [browser selected]
 -   Once the Cypress Test Runner has opened, click on ` interestRate.cy.ts` to start executing tests.
 
-### Automation Opportunities
+### As of 31 MAY 2024:
+
+- '1 - Manual Entry of Custom Values' test script in ` interestRate.cy.ts` currently fails when run. This is expected. Currently these steps should pass, but there is an existing defect on this website regarding the interest rate field being tested.
+
+#### Automation Opportunities
 
 - Being given access to API calls, would provide an opportunity to use cy.intercept and confirm API responses are providing correct information back to the application/website
 
