@@ -37,4 +37,26 @@ describe('Interest Rate Field', () => {
         .should('have.attr', 'href').and('include', 'rate=' + interestRate);
     });
 	});
+
+  context('Negative Test', () => {
+		it('7 - Interest Rate Field - Invalid Characters', () => {
+
+      cy.get(CALCULATOR.intRateField)
+        .clear()
+        .should('have.value', '')
+        .click();
+      cy.get(CALCULATOR.pieChartDisplay)
+        .click();
+      cy.get('#zmm-calc-payment p')
+        .contains('Invalid value');
+        cy.get(CALCULATOR.intRateField)
+        .clear()
+        .click()
+        .type('abc123!$%');
+      cy.get(CALCULATOR.pieChartDisplay)
+        .click();
+      cy.get('#zmm-calc-payment p')
+        .contains("'abc123!$%' is not a valid number");
+    });
+	});
 });
